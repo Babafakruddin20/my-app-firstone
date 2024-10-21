@@ -1,0 +1,17 @@
+.full{
+    height: 100%;
+    width: 100%; 
+    background-color: rgb(221, 208, 208);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+button{
+    width: 160px;
+    padding: 10px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-size: larger;
+    font-weight: bolder;
+}

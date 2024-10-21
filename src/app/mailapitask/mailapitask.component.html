@@ -1,0 +1,6 @@
+<ol>
+    <li *ngFor="let mail of mailapitasks" [ngClass]="{'true':mail.completed, 'false':!mail.completed}">
+        <p>{{mail.title}}</p>
+
+    </li>
+</ol>

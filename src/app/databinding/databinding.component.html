@@ -1,0 +1,22 @@
+
+<div class="parent">
+    <div class="child">
+        <!-- interpolation -->
+
+<h1>my age is {{age}}</h1>
+<h1>my name is {{name}}</h1>
+
+<!-- property binding -->
+ <button [disabled]="isinvalid">create</button>
+
+<!-- event binding -->
+ <button (click)="submit()">submit</button>
+
+ <input type="text" (keyup)="typing()">
+
+ <!-- two-way  binding -->
+
+ <input type="text" [(ngModel)]="phone">
+ 
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<p>banktask works!</p>
+<input type="text" [(ngModel)]="term" (keyup)="search()" placeholder="search">
+
+<label for="">Page:</label>
+<select [(ngModel)]="page"(change)="pagination()">
+    <option >1</option>
+    <option>2</option>
+    <option >3</option>
+    <option >4</option>
+    <option >5</option>
+    <option >6</option>
+</select>
+
+<label for="">column:</label>
+<select [(ngModel)]="column">
+    <option >account_name</option>
+    <option >available_balance</option>
+    <option >account_number</option>
+    <option >city</option>
+</select>
+<label for="">order:</label>
+<select [(ngModel)]="order">
+    <option value="asc">Ascending</option>
+    <option value="desc">Descending</option>
+</select>
+<button (click)="sort()">sort</button>
+<table border="3">
+    <thead>
+        <tr>
+            <th>account_name</th>
+            <th>available_balance</th>
+            <th>account_number</th>
+            <th>city</th>
+            <th>profile_picture </th>
+            <th>id</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let banktask of banktasks">
+            <td>{{banktask.account_name}}</td>
+            <td>{{banktask.available_balance}}</td>
+            <td>{{banktask.account_number}}</td>
+            <td>{{banktask.city}}</td>
+            <td>
+                <img src="{{banktask.profile_picture}}" alt="" width="100px" height="100px"></td>
+            <td>{{banktask.id}}</td>
+            <td>
+                <button routerLink="../bank-details/{{banktask.id}}">view</button>
+                <button (click)="delete(banktask.id)">delete</button>
+            </td>
+        </tr>
+
+    </tbody>
+</table>

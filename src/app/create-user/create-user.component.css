@@ -56,3 +56,6 @@ button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
 }
+p{
+    color: #45a049;
+}

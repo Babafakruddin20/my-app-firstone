@@ -1,20 +1,20 @@
 
 <div class="parent">
     <div class="child">
-        <!-- interpolation -->
+        <!-- interpolation from .ts/class  to html/view  -->
 
 <h1>my age is {{age}}</h1>
 <h1>my name is {{name}}</h1>
 
-<!-- property binding -->
+<!-- property binding it means conditional -->
  <button [disabled]="isinvalid">create</button>
 
-<!-- event binding -->
+<!-- event binding by doing some actions and its means by clicking -->
  <button (click)="submit()">submit</button>
 
  <input type="text" (keyup)="typing()">
 
- <!-- two-way  binding -->
+ <!-- two-way  binding  by interchaning its means both property and event binding-->
 
  <input type="text" [(ngModel)]="phone">
  
